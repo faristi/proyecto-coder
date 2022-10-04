@@ -16,6 +16,10 @@ def mostrar_datos(request):
     familiar_2 = Familiar(nombre="Juan", edad="10", fecha_ingreso="2022-02-01")
     familiar_3 = Familiar(nombre="Roberto", edad="25", fecha_ingreso="2010-05-05")
 
+    familiar_1.save()
+    familiar_2.save()
+    familiar_3.save()
+
     dict_contexto = {"familiar1": familiar_1, "familiar2": familiar_2, "familiar3": familiar_3}
     respuesta = template.render(dict_contexto)
     
